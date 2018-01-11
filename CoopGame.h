@@ -28,19 +28,20 @@ void replayGame() {
 	cout << "Would you like to replay? (Y or N)";
 	cin >> choice;
 	if (choice == 'Y' || 'y') {
-		replay = true;
 		if (choice != 'Y' || 'y') {
 			cout << "That is not a valid input";
 			cout << "Would you like to replay? (Y or N)";
 			cin >> choice;
+			replay = true;
 		}
 	}
 	else {
-		replay = false;
+		
 		if (choice = 'N' || 'n') {
 			cout << "That is not a valid input";
 			cout << "Would you like to replay? (Y or N)";
 			cin >> choice;
+			replay = false;
 		}
 	}
 }
@@ -204,6 +205,8 @@ char winCondition() {
 		return 'O';
 	if (matrix[2][0] == 'O' && matrix[1][1] == 'O' && matrix[0][2] == 'O')
 		return 'O';
+
+	
 
 	return '/';
 }

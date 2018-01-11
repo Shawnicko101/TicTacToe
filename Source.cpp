@@ -12,11 +12,11 @@ int n;
 
 int main() {
 
+	//Displays the start screen of the game
 	welcomeMessage();
 	menuPrint();
 
-
-
+	//Setting the amount of turns that have happened to determine whether the game is a draw, if this gets to 9 then the game is considered a draw.
 	n = 0;
 	
 	//This is the main loop of the game and will just take the output for the win condition and print it to the player.
@@ -39,12 +39,13 @@ int main() {
 				cout << "It's a draw" << endl;
 				break;
 			}
+			//Toggles which player is currently playing.
 			playerToggle();
 			
 
 		}
-		system("pause");
-		system("cls");
+		system("pause"); //This block of code tells the system to first pause so that the player can see who has won, then it will clear the screen and run the main menu function.
+		system("cls");  //The menuPrint() function acts as a reset function because it takes the player straight back to the main menu where they can choose whether to replay or to quit the game.
 		menuPrint();
 		
 	}
